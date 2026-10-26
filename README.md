@@ -79,3 +79,8 @@ Choose which menus get a nice background panel:
 1. Download the latest `.dll` file from the releases page.
 2. Drag and drop it straight into your main Beat Saber `Plugins` folder.
 3. Make sure you have the required mods installed (**BSML** and **SiraUtil**).
+
+---
+
+## This mod is inspired by [LevelerDetailerView](https://git.gay/TheBlackParrot/BS_LevelerDetailerView) by [TheBlackParrot](https://git.gay/TheBlackParrot)
+PLEASE check out his mods
