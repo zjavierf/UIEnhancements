@@ -1,0 +1,5 @@
+﻿<vertical anchor-pos-x="2" anchor-pos-y="-9" ignore-layout="true" child-control-height="false" horizontal-fit="PreferredSize" child-control-width="false" xsi:noNamespaceSchemaLocation="https://monkeymanboy.github.io/BSML-Docs/BSMLSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <horizontal horizontal-fit="PreferredSize" pref-width="160" pref-height="88" bg="round-rect-panel" bg-alpha="~border-alpha" bg-color="~border-color" child-align="MiddleCenter">
+        <horizontal id="LevelSelectionBackgroundPanel" horizontal-fit="PreferredSize" pref-width="157" pref-height="85" bg="round-rect-panel" bg-alpha="~bg-alpha" bg-color="~bg-color"/>
+    </horizontal>
+</vertical>

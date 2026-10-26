@@ -1,0 +1,140 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="UIEnhancements.csproj" Condition="Exists('UIEnhancements.csproj')"/>
+    <Import Project="UIEnhancements.csproj.user" Condition="Exists('UIEnhancements.csproj.user')"/>
+
+    <PropertyGroup>
+        <TargetFramework>net472</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <EnableFrameworkPathOverride>true</EnableFrameworkPathOverride>
+        <FrameworkPathOverride>$(BeatSaberDir)\Beat Saber_Data\Managed</FrameworkPathOverride>
+        <MarkPackageReferencesAsExternallyResolved>false</MarkPackageReferencesAsExternallyResolved>
+        <RootNamespace>UIEnhancements</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BeatSaberModdingTools.Tasks" Version="2.0.0-beta7">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="UIEnhancements.csproj"/>
+        <None Include="UIEnhancements.csproj.user" Condition="Exists('UIEnhancements.csproj.user')" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="0Harmony">
+            <HintPath>$(BeatSaberDir)\Libs\0Harmony.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="BeatSaber.ViewSystem">
+            <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\BeatSaber.ViewSystem.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="BGLib.UnityExtension">
+            <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\BGLib.UnityExtension.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="BSML">
+            <HintPath>$(BeatSaberDir)\Plugins\BSML.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="Hive.Versioning">
+            <HintPath>$(BeatSaberDir)\Libs\Hive.Versioning.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="HMLib">
+            <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\HMLib.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="HMUI">
+            <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\HMUI.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="IPA.Loader">
+            <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\IPA.Loader.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="Main">
+            <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\Main.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="mscorlib"/>
+        <Reference Include="netstandard"/>
+        <Reference Include="SiraUtil">
+            <HintPath>$(BeatSaberDir)\Plugins\SiraUtil.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="Unity.TextMeshPro">
+            <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="UnityEngine">
+            <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\UnityEngine.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+            <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="UnityEngine.InputLegacyModule">
+            <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="UnityEngine.UI">
+            <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\UnityEngine.UI.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.UIElementsModule">
+            <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.UIModule">
+            <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="Zenject">
+            <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\Zenject.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="Zenject-usage">
+            <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\Zenject-usage.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="ZenjectExtension">
+            <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\ZenjectExtension.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="UI\BSML\SongListBackground.bsml" />
+      <EmbeddedResource Include="UI\BSML\SongListBackground.bsml" />
+      <None Remove="UI\BSML\LeaderboardBackground.bsml" />
+      <EmbeddedResource Include="UI\BSML\LeaderboardBackground.bsml" />
+      <None Remove="UI\BSML\GameplaySettingsBackground.bsml" />
+      <EmbeddedResource Include="UI\BSML\GameplaySettingsBackground.bsml" />
+      <None Remove="UI\BSML\LevelSelectionBackground.bsml" />
+      <EmbeddedResource Include="UI\BSML\LevelSelectionBackground.bsml" />
+      <None Remove="UI\BSML\ModsBackground.bsml" />
+      <EmbeddedResource Include="UI\BSML\ModsBackground.bsml" />
+      <None Remove="Resources\exitIcon.png" />
+      <EmbeddedResource Include="Resources\exitIcon.png" />
+      <None Remove="UI\SettingsFlow\ModSettingsView.bsml" />
+      <EmbeddedResource Include="UI\SettingsFlow\ModSettingsView.bsml" />
+      <None Remove="UI\BSML\BSPlusMusicBackground.bsml" />
+      <EmbeddedResource Include="UI\BSML\BSPlusMusicBackground.bsml" />
+      <None Remove="UI\BSML\BeatleaderNewsBackground.bsml" />
+      <EmbeddedResource Include="UI\BSML\BeatleaderNewsBackground.bsml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Resources\" />
+    </ItemGroup>
+    
+
+</Project>

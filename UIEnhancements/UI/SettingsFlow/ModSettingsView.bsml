@@ -1,0 +1,158 @@
+﻿<bg anchor-pos-y="-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://monkeymanboy.github.io/BSML-Docs/BSMLSchema.xsd">
+
+    <!-- Custom Title -->
+    <horizontal anchor-pos-y="50" vertical-fit="PreferredSize" horizontal-fit="PreferredSize" spacing="4" bg="round-rect-panel" bg-alpha="0.8" pref-height="10" pref-width="60">
+        <text text="UI Enhancement Settings" font-color="orange" font-size="7" align="Center"/>
+    </horizontal>
+
+    <!-- Exit Button -->
+    <clickable-image src="UIEnhancements.Resources.exitIcon.png" on-click="BackButton" hover-hint="Exit" highlight-color="red" scale="0.5" anchor-pos-y="50" anchor-pos-x="-43"/>
+
+    <!-- Top-level Tab Bar background panel -->
+    <horizontal anchor-pos-y="2" ignore-layout="true" pivot-y="1" vertical-fit="PreferredSize" horizontal-fit="PreferredSize" bg="panel-top" bg-color="#3F3F3F" pref-height="12" pref-width="110">
+        <text text=" "/>
+    </horizontal>
+
+    <tab-selector tab-tag="tabs" anchor-pos-y="0"/>
+
+    <horizontal preferred-width="110" preferred-height="62" anchor-pos-y="-3">
+
+        <!-- Tab 1: Toggles -->
+        <tab tab-name="Toggles" tags="tabs">
+            <vertical vertical-fit="PreferredSize" pref-height="52" pref-width="110" bg="round-rect-panel" bg-alpha="0.8">
+                <scroll-view spacing="1" pref-height="45" child-expand-width="true">
+                    <checkbox-setting text="Song List Background" value="song-list-bg" hover-hint="Toggle background behind Song List." apply-on-change="true"/>
+                    <checkbox-setting text="Gameplay Settings Background" value="settings-bg" hover-hint="Toggle background behind Song Selection Settings." apply-on-change="true"/>
+                    <checkbox-setting text="Level Selection Background" value="main-bg" hover-hint="Toggle background behind level selection." apply-on-change="true"/>
+                    <checkbox-setting text="Leaderboard Background" value="leaderboard-bg" hover-hint="Toggle background behind leaderboards." apply-on-change="true"/>
+                    <checkbox-setting text="Mods Background" value="mods-bg" hover-hint="Toggle background for the Mod list." apply-on-change="true"/>
+                    <checkbox-setting text="BeatLeader News Background" value="beatleader-news-bg" hover-hint="Toggle background behind BeatLeader News." apply-on-change="true"/>
+                    <checkbox-setting text="BS+ Menu Music Background" value="bsplus-music-bg" hover-hint="Toggle background behind BSPlus Menu Music widget." apply-on-change="true"/>
+                </scroll-view>
+            </vertical>
+        </tab>
+
+        <!-- Tab 2: Customization (Nested Tabs) -->
+        <tab tab-name="Customization" tags="tabs">
+			<page-button anchor-pos-x="-55" anchor-pos-y="12.5" tags="LeftButton" direction="Left"/>
+            <tab-selector tab-tag="custom-tabs" size-delta-x="5" page-count="4" left-button-tag="LeftButton" right-button-tag="RightButton"/>
+			<page-button anchor-pos-x="55" anchor-pos-y="12.5" pref-width="4" pref-height="4" tags="RightButton" direction="Right"/>
+            <horizontal preferred-width="110" preferred-height="55" anchor-pos-y="-3">
+
+                <!-- Sub-tab 1: Global -->
+                <tab tab-name="Global" tags="custom-tabs">
+                    <vertical vertical-fit="PreferredSize" pref-height="52" pref-width="110" bg="round-rect-panel" bg-alpha="0.8" pad="2">
+                        <scroll-view spacing="1" pref-height="50" child-expand-width="true">
+                            <slider-setting text="Background Alpha" value="bg-alpha" min="0.0" max="1.0" increment="0.05" show-buttons="true" hover-hint="Adjust global background transparency level." apply-on-change="true"/>
+                            <color-setting text="Background Color" value="bg-color" hover-hint="Adjust global background tint color." apply-on-change="true"/>
+                            <horizontal> <text text=" " font-size="2" color="#00000000"/> </horizontal>
+                            <checkbox-setting text="Enable Border" value="enable-border" hover-hint="Toggle a customizable border around backgrounds." apply-on-change="true"/>
+                            <color-setting text="Border Color" value="border-color" hover-hint="Adjust global border tint color." apply-on-change="true"/>
+                            <slider-setting text="Border Alpha" value="border-alpha" min="0.0" max="1.0" increment="0.05" show-buttons="true" hover-hint="Adjust global border transparency level." apply-on-change="true"/>
+                        </scroll-view>
+                    </vertical>
+                </tab>
+
+                <!-- Sub-tab 2: Song List -->
+                <tab tab-name="Song List" tags="custom-tabs">
+                    <vertical vertical-fit="PreferredSize" pref-height="52" pref-width="110" bg="round-rect-panel" bg-alpha="0.8" pad="2">
+                        <scroll-view spacing="1" pref-height="50" child-expand-width="true">
+                            <checkbox-setting text="Selective Customization" value="selective-song-list" hover-hint="Enable individual settings separate from global." apply-on-change="true"/>
+                            <slider-setting text="Background Alpha" value="song-list-alpha" min="0.0" max="1.0" increment="0.05" show-buttons="true" apply-on-change="true"/>
+                            <color-setting text="Background Color" value="song-list-color" apply-on-change="true"/>
+                            <checkbox-setting text="Enable Border" value="song-list-enable-border" apply-on-change="true"/>
+                            <color-setting text="Border Color" value="song-list-border-color" apply-on-change="true"/>
+                            <slider-setting text="Border Alpha" value="song-list-border-alpha" min="0.0" max="1.0" increment="0.05" show-buttons="true" apply-on-change="true"/>
+                        </scroll-view>
+                    </vertical>
+                </tab>
+
+                <!-- Sub-tab 3: Gameplay Settings -->
+                <tab tab-name="Gameplay Settings" tags="custom-tabs">
+                    <vertical vertical-fit="PreferredSize" pref-height="52" pref-width="110" bg="round-rect-panel" bg-alpha="0.8" pad="2">
+                        <scroll-view spacing="1" pref-height="50" child-expand-width="true">
+                            <checkbox-setting text="Selective Customization" value="selective-settings" hover-hint="Enable individual settings separate from global." apply-on-change="true"/>
+                            <slider-setting text="Background Alpha" value="settings-alpha" min="0.0" max="1.0" increment="0.05" show-buttons="true" apply-on-change="true"/>
+                            <color-setting text="Background Color" value="settings-color" apply-on-change="true"/>
+                            <checkbox-setting text="Enable Border" value="settings-enable-border" apply-on-change="true"/>
+                            <color-setting text="Border Color" value="settings-border-color" apply-on-change="true"/>
+                            <slider-setting text="Border Alpha" value="settings-border-alpha" min="0.0" max="1.0" increment="0.05" show-buttons="true" apply-on-change="true"/>
+                        </scroll-view>
+                    </vertical>
+                </tab>
+
+                <!-- Sub-tab 4: Level Selection -->
+                <tab tab-name="Level Selection" tags="custom-tabs">
+                    <vertical vertical-fit="PreferredSize" pref-height="52" pref-width="110" bg="round-rect-panel" bg-alpha="0.8" pad="2">
+                        <scroll-view spacing="1" pref-height="50" child-expand-width="true">
+                            <checkbox-setting text="Selective Customization" value="selective-main" hover-hint="Enable individual settings separate from global." apply-on-change="true"/>
+                            <slider-setting text="Background Alpha" value="main-alpha" min="0.0" max="1.0" increment="0.05" show-buttons="true" apply-on-change="true"/>
+                            <color-setting text="Background Color" value="main-color" apply-on-change="true"/>
+                            <checkbox-setting text="Enable Border" value="main-enable-border" apply-on-change="true"/>
+                            <color-setting text="Border Color" value="main-border-color" apply-on-change="true"/>
+                            <slider-setting text="Border Alpha" value="main-border-alpha" min="0.0" max="1.0" increment="0.05" show-buttons="true" apply-on-change="true"/>
+                        </scroll-view>
+                    </vertical>
+                </tab>
+
+                <!-- Sub-tab 5: Beatleader Leaderboard -->
+                <tab tab-name="BL Leaderboard" tags="custom-tabs">
+                    <vertical vertical-fit="PreferredSize" pref-height="52" pref-width="110" bg="round-rect-panel" bg-alpha="0.8" pad="2">
+                        <scroll-view spacing="1" pref-height="50" child-expand-width="true">
+                            <checkbox-setting text="Selective Customization" value="selective-leaderboard" hover-hint="Enable individual settings separate from global." apply-on-change="true"/>
+                            <slider-setting text="Background Alpha" value="leaderboard-alpha" min="0.0" max="1.0" increment="0.05" show-buttons="true" apply-on-change="true"/>
+                            <color-setting text="Background Color" value="leaderboard-color" apply-on-change="true"/>
+                            <checkbox-setting text="Enable Border" value="leaderboard-enable-border" apply-on-change="true"/>
+                            <color-setting text="Border Color" value="leaderboard-border-color" apply-on-change="true"/>
+                            <slider-setting text="Border Alpha" value="leaderboard-border-alpha" min="0.0" max="1.0" increment="0.05" show-buttons="true" apply-on-change="true"/>
+                        </scroll-view>
+                    </vertical>
+                </tab>
+
+                <!-- Sub-tab 6: Mods -->
+                <tab tab-name="Mods" tags="custom-tabs">
+                    <vertical vertical-fit="PreferredSize" pref-height="52" pref-width="110" bg="round-rect-panel" bg-alpha="0.8" pad="2">
+                        <scroll-view spacing="1" pref-height="50" child-expand-width="true">
+                            <checkbox-setting text="Selective Customization" value="selective-mods" hover-hint="Enable individual settings separate from global." apply-on-change="true"/>
+                            <slider-setting text="Background Alpha" value="mods-alpha" min="0.0" max="1.0" increment="0.05" show-buttons="true" apply-on-change="true"/>
+                            <color-setting text="Background Color" value="mods-color" apply-on-change="true"/>
+                            <checkbox-setting text="Enable Border" value="mods-enable-border" apply-on-change="true"/>
+                            <color-setting text="Border Color" value="mods-border-color" apply-on-change="true"/>
+                            <slider-setting text="Border Alpha" value="mods-border-alpha" min="0.0" max="1.0" increment="0.05" show-buttons="true" apply-on-change="true"/>
+                        </scroll-view>
+                    </vertical>
+                </tab>
+
+                <!-- Sub-tab 7: Beatleader News -->
+                <tab tab-name="BL News" tags="custom-tabs">
+                    <vertical vertical-fit="PreferredSize" pref-height="52" pref-width="110" bg="round-rect-panel" bg-alpha="0.8" pad="2">
+                        <scroll-view spacing="1" pref-height="50" child-expand-width="true">
+                            <checkbox-setting text="Selective Customization" value="selective-beatleader-news" hover-hint="Enable individual settings separate from global." apply-on-change="true"/>
+                            <slider-setting text="Background Alpha" value="beatleader-news-alpha" min="0.0" max="1.0" increment="0.05" show-buttons="true" apply-on-change="true"/>
+                            <color-setting text="Background Color" value="beatleader-news-color" apply-on-change="true"/>
+                            <checkbox-setting text="Enable Border" value="beatleader-news-enable-border" apply-on-change="true"/>
+                            <color-setting text="Border Color" value="beatleader-news-border-color" apply-on-change="true"/>
+                            <slider-setting text="Border Alpha" value="beatleader-news-border-alpha" min="0.0" max="1.0" increment="0.05" show-buttons="true" apply-on-change="true"/>
+                        </scroll-view>
+                    </vertical>
+                </tab>
+
+                <!-- Sub-tab 8: BS+ Music -->
+                <tab tab-name="BS+ Music" tags="custom-tabs">
+                    <vertical vertical-fit="PreferredSize" pref-height="52" pref-width="110" bg="round-rect-panel" bg-alpha="0.8" pad="2">
+                        <scroll-view spacing="1" pref-height="50" child-expand-width="true">
+                            <checkbox-setting text="Selective Customization" value="selective-bsplus-music" hover-hint="Enable individual settings separate from global." apply-on-change="true"/>
+                            <slider-setting text="Background Alpha" value="bsplus-music-alpha" min="0.0" max="1.0" increment="0.05" show-buttons="true" apply-on-change="true"/>
+                            <color-setting text="Background Color" value="bsplus-music-color" apply-on-change="true"/>
+                            <checkbox-setting text="Enable Border" value="bsplus-music-enable-border" apply-on-change="true"/>
+                            <color-setting text="Border Color" value="bsplus-music-border-color" apply-on-change="true"/>
+                            <slider-setting text="Border Alpha" value="bsplus-music-border-alpha" min="0.0" max="1.0" increment="0.05" show-buttons="true" apply-on-change="true"/>
+                        </scroll-view>
+                    </vertical>
+                </tab>
+
+            </horizontal>
+        </tab>
+
+    </horizontal>
+</bg>

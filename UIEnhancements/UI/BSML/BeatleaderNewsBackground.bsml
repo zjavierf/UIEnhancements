@@ -1,0 +1,5 @@
+﻿<vertical anchor-pos-x="17" anchor-pos-y="-10" ignore-layout="true" child-control-height="false" horizontal-fit="PreferredSize" child-control-width="false" xsi:noNamespaceSchemaLocation="https://monkeymanboy.github.io/BSML-Docs/BSMLSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <horizontal horizontal-fit="PreferredSize" pref-width="143" pref-height="83" bg="round-rect-panel" bg-alpha="~border-alpha" bg-color="~border-color" child-align="MiddleCenter">
+        <horizontal id="BeatleaderNewsBackgroundPanel" horizontal-fit="PreferredSize" pref-width="140" pref-height="80" bg="round-rect-panel" bg-alpha="~bg-alpha" bg-color="~bg-color"/>
+    </horizontal>
+</vertical>

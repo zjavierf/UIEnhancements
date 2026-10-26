@@ -1,0 +1,5 @@
+﻿<vertical anchor-pos-y="-37" ignore-layout="true" child-control-height="false" horizontal-fit="PreferredSize" child-control-width="false" xsi:noNamespaceSchemaLocation="https://monkeymanboy.github.io/BSML-Docs/BSMLSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <horizontal horizontal-fit="PreferredSize" pref-width="98" pref-height="27" bg="round-rect-panel" bg-alpha="~border-alpha" bg-color="~border-color" child-align="MiddleCenter">
+        <horizontal id="BSPlusMusicBackgroundPanel" horizontal-fit="PreferredSize" pref-width="95" pref-height="24" bg="round-rect-panel" bg-alpha="~bg-alpha" bg-color="~bg-color"/>
+    </horizontal>
+</vertical>
